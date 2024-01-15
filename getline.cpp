@@ -4,11 +4,12 @@ using namespace std;
 
 int main() {
   string str = "This,is,a,string";
+  stringstream ss(str);
   string token;
   char delim = ',';
 
   // Split the string using getline()
-  while (getline(str, token, delim)) {
+  while (getline(ss, token, delim)) {
     cout << token << endl;
   }
 
